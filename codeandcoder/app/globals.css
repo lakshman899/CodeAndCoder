@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth; /* এটা পুরো পেজে স্মুথ স্ক্রল অ্যাক্টিভ করবে */
+}
+
+/* কাস্টম স্ক্রলবারের বেসিক স্টাইল */
+html::-webkit-scrollbar {
+  width: 8px; /* স্ক্রলবারের প্রস্থ (ভার্টিক্যালের জন্য) */
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f1f1; /* ট্র্যাকের ব্যাকগ্রাউন্ড (হালকা ধূসর) */
+  border-radius: 10px; /* রাউন্ডেড কর্নার */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #888; /* থাম্বের কালার (ধূসর) */
+  border-radius: 10px; /* রাউন্ডেড থাম্ব */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #555; /* হোভারে ডার্ক কালার */
+}
+
+/* যদি হরিজন্টাল স্ক্রলবার চাও (যেমন সাইড স্ক্রল) */
+html::-webkit-scrollbar {
+  height: 8px; /* হরিজন্টালের জন্য হাইট */
+}

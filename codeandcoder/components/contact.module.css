@@ -1,0 +1,273 @@
+.container {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.leftSection {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .leftSection {
+    width: 45%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #03f717;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
+
+.email {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .email {
+    font-size: 1.2rem;
+  }
+}
+
+.emailLink {
+  color: #03f717;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+  color: #02c814;
+}
+
+.contactImage {
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .contactImage {
+    max-width: 12rem;
+  }
+}
+
+.rightSection {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .rightSection {
+    width: 40%;
+  }
+}
+
+.formTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #03f717;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .formTitle {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #03f717;
+  margin-bottom: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .label {
+    font-size: 0.9rem;
+  }
+}
+
+.input {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #03f717;
+  border-radius: 0.3rem;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #02c814;
+  box-shadow: 0 0 6px rgba(3, 247, 23, 0.4);
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+.textarea {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #03f717;
+  border-radius: 0.3rem;
+  color: #e0e0e0;
+  min-height: 4rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textarea:focus {
+  border-color: #02c814;
+  box-shadow: 0 0 6px rgba(3, 247, 23, 0.4);
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+.recaptcha {
+  display: flex;
+  justify-content: center;
+  margin: 0.8rem 0;
+}
+
+.submitButton {
+  background-color: #03f717;
+  color: #0e141b;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #03f717;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton:hover {
+  background-color: #02c814;
+  border-color: #02c814;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submitButton.sending::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #0e141b;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.status {
+  font-size: 0.8rem;
+  color: #03f717;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .status {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,95 @@
+.container {
+  padding: 60px 40px; /* Increased padding for desktop */
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 36px; /* Larger font for desktop */
+  font-weight: 600;
+  margin-bottom: 35px; /* More spacing below title */
+  text-align: center;
+  color: #fff;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap into multiple rows */
+  gap: 40px; /* Consistent gap */
+  justify-content: center; /* Center cards for desktop */
+  max-width: 1200px; /* Fit more cards (e.g., 5 cards: 5 * 200px + 4 * 40px gap) */
+  margin: 0 auto;
+  padding: 20px 0; /* Slightly increased padding */
+  overflow-x: hidden; /* No scrolling needed for desktop */
+}
+
+.card {
+  width: 200px; /* Slightly larger cards for desktop */
+  background: #1c1c1c;
+  border-radius: 16px; /* Slightly larger border radius */
+  padding: 20px; /* More padding inside cards */
+  display: flex;
+  align-items: flex-start;
+  gap: 16px; /* Increased gap between icon and text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow */
+  transition: all 0.25s ease;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-6px); /* Slightly larger hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+
+.iconContainer {
+  width: 60px; /* Larger icon container */
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+  border-radius: 16px; /* Match card's border radius */
+  font-size: 28px; /* Slightly larger icon */
+  color: #00c853;
+}
+
+.icon {
+  font-size: 30px; /* Adjusted for consistency */
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardName {
+  font-size: 16px; /* Slightly larger font */
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.codeCoder {
+  font-size: 14px; /* Slightly larger font */
+  color: #bbb;
+  margin-bottom: 8px; /* More spacing */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Slightly larger gap */
+}
+
+.starIcon {
+  font-size: 16px; /* Slightly larger star */
+  color: #fbbc04;
+}
+
+.ratingNumber {
+  font-size: 14px; /* Slightly larger font */
+  font-weight: 500;
+  color: #fff;
+}

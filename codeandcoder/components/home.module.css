@@ -1,0 +1,232 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/image/homebackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .container::before {
+    background-image: url('/image/phonebg.jpg');
+    filter: brightness(20%);
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+.container .welcome {
+  border: 2px solid rgb(243, 168, 28);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(255, 188, 2);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container .welcome {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .welcome {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+.container .mainHeading {
+  font-size: 1.75rem; /* Reduced from 2rem for mobile */
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+  color: rgb(3, 247, 23);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container .mainHeading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .mainHeading {
+    font-size: 1.25rem; /* Reduced from 1.5rem for smaller screens */
+  }
+}
+
+.container .rotatingText {
+  display: inline-flex;
+  white-space: nowrap;
+  overflow: hidden;
+  min-height: 1.5em;
+}
+
+.container .rotatingText span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-15px) scale(0.95);
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.container .rotatingText.exiting span {
+  animation: slideOut 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.container .rotatingText span {
+  animation-delay: calc(var(--index) * 0.05s);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(15px) scale(0.95);
+  }
+}
+
+.container .description {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: justify;
+  max-width: 90%;
+}
+
+@media (min-width: 768px) {
+  .container .description {
+    font-size: 1.5rem;
+    max-width: 48rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .description {
+    font-size: 1rem;
+    max-width: 95%;
+    text-align: justify;
+  }
+}
+
+.container .buttonContainer {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container .buttonContainer {
+    gap: 1.25rem;
+  }
+}
+
+.container .actionButton {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container .actionButton:hover {
+  background-color: #2563eb;
+}
+
+@media (min-width: 768px) {
+  .container .actionButton {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .actionButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+.container .contactButton {
+  display: inline-block;
+  background-color: #4b5563;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container .contactButton:hover {
+  background-color: #374151;
+}
+
+@media (min-width: 768px) {
+  .container .contactButton {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .contactButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+  }
+}

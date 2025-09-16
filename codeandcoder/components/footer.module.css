@@ -1,0 +1,125 @@
+.footer {
+  background: linear-gradient(to right, black, #1f1f1f, #2c2c2c);
+  padding: 2rem 0;
+  color: #e5e7eb;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00f800; /* Updated to match navbar */
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerList li {
+  margin-bottom: 0.75rem;
+}
+
+.footerList a {
+  color: #e5e7eb; /* Updated to match navbar */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footerList a:hover {
+  color: #3b82f6; /* Updated to match navbar hover */
+}
+
+.icon {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: #e5e7eb; /* Updated to match navbar */
+  transition: color 0.3s ease;
+}
+
+.footerList a:hover .icon {
+  color: #3b82f6; /* Updated to match navbar hover */
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #374151;
+}
+
+.footerBottom p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr; /* Two columns: left and right */
+    gap: 1.5rem;
+  }
+
+  .footerColumn:nth-child(1) {
+    /* Main: Left side with indent */
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .footerColumn:nth-child(2) {
+    /* Learn: Right side with indent */
+    padding-right: 1rem;
+    text-align: right;
+  }
+
+  .footerColumn:nth-child(3) {
+    /* Legal: Left side with indent, below Main */
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .footerColumn:nth-child(4) {
+    /* Social: Right side with indent, below Learn */
+    padding-right: 1rem;
+    text-align: right;
+  }
+
+  .columnTitle {
+    font-size: 1.1rem;
+    color: #41f809; /* Updated to match navbar */
+  }
+
+  .footerList a {
+    font-size: 0.9rem;
+    color: #e5e7eb; /* Updated to match navbar */
+    justify-content: flex-start; /* Left-to-right alignment for all items */
+  }
+
+  .footerColumn:nth-child(2) .footerList a,
+  .footerColumn:nth-child(4) .footerList a {
+    justify-content: flex-end; /* Right-align items for Learn and Social */
+  }
+
+  .footerBottom p {
+    font-size: 0.8rem;
+  }
+}
